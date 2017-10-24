@@ -28,33 +28,26 @@ class PreferencesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 2
+//    }
+//
+//    override func tableView(_ tableView: UITableView, heightForRowAt IndexPath: IndexPath) -> CGFloat {
+//        return(50)
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell= tableView.dequeueReusableCell(withIdentifier: "AccountTableViewCell", for: indexPath) as! accountPrefTableViewCell
+//        return cell
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, heightForRowAt IndexPath: IndexPath) -> CGFloat {
-        if IndexPath.row % 2 == 0 {
-            return(50)
-        }
-        else {
-            return (50)
-        }
-    }
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+//    }
+    
 
     /*
     // Override to support conditional editing of the table view.
