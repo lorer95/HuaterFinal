@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3FB7191FA10D0E0018B70A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB7181FA10D0E0018B70A /* UserInfoViewController.swift */; };
 		A15C41F81F9D3EF7005B63FF /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */; };
 		A1B955F21F9AD3C700E2F9EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B955F11F9AD3C700E2F9EA /* AppDelegate.swift */; };
 		A1B955F41F9AD3C700E2F9EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B955F31F9AD3C700E2F9EA /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3FB7181FA10D0E0018B70A /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
 		A1B955EE1F9AD3C700E2F9EA /* HuaterFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaterFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B955F11F9AD3C700E2F9EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				A1B955F11F9AD3C700E2F9EA /* AppDelegate.swift */,
 				A1B955F31F9AD3C700E2F9EA /* ViewController.swift */,
+				0A3FB7181FA10D0E0018B70A /* UserInfoViewController.swift */,
 				A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */,
 				A1B955F51F9AD3C700E2F9EA /* Main.storyboard */,
 				A1B955FB1F9AD3C700E2F9EA /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			files = (
 				A15C41F81F9D3EF7005B63FF /* PreferencesTableViewController.swift in Sources */,
 				A1B955FA1F9AD3C700E2F9EA /* HuaterFinal.xcdatamodeld in Sources */,
+				0A3FB7191FA10D0E0018B70A /* UserInfoViewController.swift in Sources */,
 				A1B955F41F9AD3C700E2F9EA /* ViewController.swift in Sources */,
 				A1B955F21F9AD3C700E2F9EA /* AppDelegate.swift in Sources */,
 			);
