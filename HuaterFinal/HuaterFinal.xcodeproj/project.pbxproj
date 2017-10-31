@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0A3FB7191FA10D0E0018B70A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB7181FA10D0E0018B70A /* UserInfoViewController.swift */; };
+		3B05E5E11FA6887700560F2F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E5E01FA6887700560F2F /* LogInViewController.swift */; };
+		3B05E5E31FA6897C00560F2F /* ShowUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E5E21FA6897C00560F2F /* ShowUserInfoViewController.swift */; };
+		3B05E5E51FA6898900560F2F /* EditUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E5E41FA6898900560F2F /* EditUserInfoViewController.swift */; };
+		3B05E5E71FA6899E00560F2F /* EditSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E5E61FA6899E00560F2F /* EditSettingsViewController.swift */; };
+		3B05E5E91FA6997100560F2F /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E5E81FA6997100560F2F /* PersistenceService.swift */; };
+		3B05E5ED1FA69A1B00560F2F /* appUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E5EC1FA69A1B00560F2F /* appUser.swift */; };
 		A15C41F81F9D3EF7005B63FF /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */; };
 		A1B955F21F9AD3C700E2F9EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B955F11F9AD3C700E2F9EA /* AppDelegate.swift */; };
-		A1B955F41F9AD3C700E2F9EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B955F31F9AD3C700E2F9EA /* ViewController.swift */; };
 		A1B955F71F9AD3C700E2F9EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B955F51F9AD3C700E2F9EA /* Main.storyboard */; };
 		A1B955FA1F9AD3C700E2F9EA /* HuaterFinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1B955F81F9AD3C700E2F9EA /* HuaterFinal.xcdatamodeld */; };
 		A1B955FC1F9AD3C700E2F9EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B955FB1F9AD3C700E2F9EA /* Assets.xcassets */; };
@@ -19,10 +24,15 @@
 
 /* Begin PBXFileReference section */
 		0A3FB7181FA10D0E0018B70A /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		3B05E5E01FA6887700560F2F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		3B05E5E21FA6897C00560F2F /* ShowUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowUserInfoViewController.swift; sourceTree = "<group>"; };
+		3B05E5E41FA6898900560F2F /* EditUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserInfoViewController.swift; sourceTree = "<group>"; };
+		3B05E5E61FA6899E00560F2F /* EditSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSettingsViewController.swift; sourceTree = "<group>"; };
+		3B05E5E81FA6997100560F2F /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		3B05E5EC1FA69A1B00560F2F /* appUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appUser.swift; sourceTree = "<group>"; };
 		A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
 		A1B955EE1F9AD3C700E2F9EA /* HuaterFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaterFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B955F11F9AD3C700E2F9EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1B955F31F9AD3C700E2F9EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1B955F61F9AD3C700E2F9EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1B955F91F9AD3C700E2F9EA /* HuaterFinal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HuaterFinal.xcdatamodel; sourceTree = "<group>"; };
 		A1B955FB1F9AD3C700E2F9EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				A1B955F11F9AD3C700E2F9EA /* AppDelegate.swift */,
-				A1B955F31F9AD3C700E2F9EA /* ViewController.swift */,
 				0A3FB7181FA10D0E0018B70A /* UserInfoViewController.swift */,
 				A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */,
 				A1B955F51F9AD3C700E2F9EA /* Main.storyboard */,
@@ -69,6 +78,12 @@
 				A1B955FD1F9AD3C700E2F9EA /* LaunchScreen.storyboard */,
 				A1B956001F9AD3C700E2F9EA /* Info.plist */,
 				A1B955F81F9AD3C700E2F9EA /* HuaterFinal.xcdatamodeld */,
+				3B05E5E01FA6887700560F2F /* LogInViewController.swift */,
+				3B05E5E21FA6897C00560F2F /* ShowUserInfoViewController.swift */,
+				3B05E5E41FA6898900560F2F /* EditUserInfoViewController.swift */,
+				3B05E5E61FA6899E00560F2F /* EditSettingsViewController.swift */,
+				3B05E5E81FA6997100560F2F /* PersistenceService.swift */,
+				3B05E5EC1FA69A1B00560F2F /* appUser.swift */,
 			);
 			path = HuaterFinal;
 			sourceTree = "<group>";
@@ -147,9 +162,14 @@
 			files = (
 				A15C41F81F9D3EF7005B63FF /* PreferencesTableViewController.swift in Sources */,
 				A1B955FA1F9AD3C700E2F9EA /* HuaterFinal.xcdatamodeld in Sources */,
+				3B05E5ED1FA69A1B00560F2F /* appUser.swift in Sources */,
+				3B05E5E11FA6887700560F2F /* LogInViewController.swift in Sources */,
 				0A3FB7191FA10D0E0018B70A /* UserInfoViewController.swift in Sources */,
-				A1B955F41F9AD3C700E2F9EA /* ViewController.swift in Sources */,
 				A1B955F21F9AD3C700E2F9EA /* AppDelegate.swift in Sources */,
+				3B05E5E51FA6898900560F2F /* EditUserInfoViewController.swift in Sources */,
+				3B05E5E71FA6899E00560F2F /* EditSettingsViewController.swift in Sources */,
+				3B05E5E91FA6997100560F2F /* PersistenceService.swift in Sources */,
+				3B05E5E31FA6897C00560F2F /* ShowUserInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

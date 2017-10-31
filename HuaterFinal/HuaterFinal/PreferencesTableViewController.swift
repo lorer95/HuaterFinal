@@ -12,6 +12,7 @@ import CoreData
 class PreferencesTableViewController: UITableViewController {
 
     var user = [NSManagedObject]()
+    var idNO: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,7 @@ class PreferencesTableViewController: UITableViewController {
         
         let managedContext = appDelegate?.persistentContainer.viewContext
         
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "AppUser")
         // let deleteRequest = NSBatchDeleteRequest( fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
         
         do {
@@ -39,6 +40,21 @@ class PreferencesTableViewController: UITableViewController {
         }
         catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let indexPath = tableView.indexPathForSelectedRow?.row
+        if (indexPath == 0) {
+            let vc = segue.destination as! ShowUserInfoViewController
+            
+            vc.idNO = idNO
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
         }
     }
 
