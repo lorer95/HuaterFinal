@@ -38,6 +38,7 @@ class EditSettingsViewController: UIViewController {
         if currentUser.metric == m {
             w = currentUser.weight
         }
+            
         else {
             if m == "Lbs" {
                 w = Int(Double(currentUser.weight) * 2.2)

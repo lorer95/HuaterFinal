@@ -29,7 +29,9 @@ class ShowUserInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         PersistenceService.shared.fetchUsers()
-        
+        let defaults = UserDefaults.standard
+        let idNO = defaults.integer(forKey: "idNO")
+
         print(idNO - 1)
         currentUser = PersistenceService.shared.getUser(index:  idNO-1 )
         
@@ -43,6 +45,27 @@ class ShowUserInfoViewController: UIViewController {
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        PersistenceService.shared.fetchUsers()
+        let defaults = UserDefaults.standard
+        let idNO = defaults.integer(forKey: "idNO")
+
+        currentUser = PersistenceService.shared.getUser(index:  idNO)
+        print(currentUser)
+        
+        self.emailLabel.text = currentUser.email
+        self.fNameLabel.text = currentUser.fName
+        self.lNameLabel.text = currentUser.lName
+        self.ageLabel.text = String( currentUser.age )
+        self.genderLabel.text = currentUser.gender
+        self.weightLabel.text = String( currentUser.weight ) + " " + currentUser.metric
+        self.nameTitleLabel.text = currentUser.fName + " " + currentUser.lName
+        print("appear")
+        
     }
 
     override func didReceiveMemoryWarning() {

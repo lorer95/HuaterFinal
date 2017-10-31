@@ -23,9 +23,12 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
     var ageData: [String] = [String]()
     var ageTmp: Int = 0
     var currentUser: appUser!
-    var idNO: Int!
     
     @IBAction func saveEdit(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        let idNO = defaults.integer(forKey: "idNO")
+        
         if emailText.text?.characters.count == 0 || fNameText.text?.characters.count == 0 || lNameText.text?.characters.count == 0 {
             let alert3 = UIAlertController(title: "Message",
                                            message: "You must enter a value for all fields" ,
@@ -39,6 +42,15 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
             present(alert3, animated: true, completion: nil)
         }
         else {
+            let alert4 = UIAlertController(title: "Saved",
+                                           message: "New User Info Saved!" ,
+                                           preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert4.addAction(UIAlertAction(title: "OK",
+                                           style: UIAlertActionStyle.default,
+                                           handler: nil))
+            present(alert4, animated: true, completion: nil)
+            
             var m = ""
             if metric.selectedSegmentIndex == 0 {
                 m = "Lbs"
@@ -55,10 +67,9 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
                 g = "Female"
             }
         
-            idNO = currentUser.idNO
             let stringInfo = [self.fNameText.text!, self.lNameText.text!, self.emailText.text!, currentUser.pswd, g, m, currentUser.theme]
             let numInfo = [ageTmp, Int(self.weight.text!)!]
-        
+            print (self.fNameText.text!, self.lNameText.text!, self.emailText.text!, currentUser.pswd, g, m, currentUser.theme, idNO)
             PersistenceService.shared.editUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
             currentUser = PersistenceService.shared.getUser(index: idNO-1)
             self.nameTitle.text = currentUser.fName + " " + currentUser.lName

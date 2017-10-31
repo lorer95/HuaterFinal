@@ -11,6 +11,7 @@ import CoreData
 
 class UserInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -22,9 +23,11 @@ class UserInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     var ageData: [String] = [String]()
     var ageTmp: Int = 0
-    var idNO: Int = 0
     
     @IBAction func createAccount(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        var idNO = defaults.integer(forKey: "idNO")
         
         if firstName.text!.characters.count == 0 || lastName.text!.characters.count == 0 || email.text!.characters.count == 0 || pswdLabel.text!.characters.count == 0 {
             let alert = UIAlertController(title: "Message",
@@ -107,9 +110,7 @@ class UserInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-            let pt = segue.destination as! PreferencesTableViewController
-            
-            pt.idNO = idNO
+        
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem

@@ -73,6 +73,10 @@ class PersistenceService {
     }
     
     func getUser(index:Int) -> appUser {
+        
+        let defaults = UserDefaults.standard
+        let idNO = defaults.integer(forKey: "idNO")
+        
         if index < users.count {
             let p = users[index]
             let fN = p.value(forKey: "firstName") as! String
@@ -95,13 +99,15 @@ class PersistenceService {
         } else {
             let stringInfo = ["<bad>", "<bad>", "<bad>", "<bad>", "<bad>", "<bad>", "<bad>"]
             let numInfo = [0, 0]
-            let idNO = 0
             
             return appUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
         }
     }
     
     func getSignedInUser(email:String, pswdText: String ) -> appUser {
+        
+        let defaults = UserDefaults.standard
+        let idNO = defaults.integer(forKey: "idNO")
     
         var fN = "<bad>"
         var lN = "<bad>"
@@ -112,7 +118,7 @@ class PersistenceService {
         var theme = "<bad>"
         var a = -1
         var w = -1
-        var idNO = -1
+//        var idNO = -1
         
         for i in 1...users.count {
             let u = self.getUser(index: i-1)
@@ -129,7 +135,7 @@ class PersistenceService {
                 m = p.value(forKey: "metric") as! String
                 pswd = p.value(forKey: "pswd") as! String
                 theme = p.value(forKey: "theme") as! String
-                idNO = p.value(forKey: "idNO") as! Int
+//                idNO = p.value(forKey: "idNO") as! Int
             }
         }
             
@@ -162,6 +168,7 @@ class PersistenceService {
         guard let results = fetchedResults else { return }
         
         users = results
+        print(users)
     }
     
     func isUser( email: String, pswd: String ) -> Bool {
@@ -178,33 +185,41 @@ class PersistenceService {
         return false
     }
 
-    func editUser( idNO: Int, stringInfo: [String], numInfo: [Int] ) {
+    func editUser( idNO: Int, stringInfo: [String], numInfo: [Int] ) { //pass in everything...
         
         let managedContext = persistentContainer.viewContext
         
         // Create the entity we want to save
-        let entity = NSEntityDescription.entity(forEntityName: "AppUser", in: managedContext)
         
-        let _user = NSManagedObject(entity: entity!, insertInto:managedContext)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "AppUser")
+        fetchRequest.predicate = NSPredicate(format: "idNO = %@", idNO)
         
-        let sKeys = ["firstName", "lastName", "email", "pswd", "gender",  "metric", "theme"]
-        let nKeys = ["age", "weight"]
         
-        _user.setValue(idNO, forKey: "idNO")
-        
-        for i in 1...stringInfo.count {
-            _user.setValue(stringInfo[i-1], forKey: sKeys[i-1])
+        if let fetchResults = managedContext.fetch(fetchRequest) as? [NSManagedObject] {
+            if fetchResults.count != 0{
+                
+                let _user = fetchResults[0]
+                
+                let sKeys = ["firstName", "lastName", "email", "pswd", "gender",  "metric", "theme"]
+                let nKeys = ["age", "weight"]
+                
+                _user.setValue(idNO, forKey: "idNO")
+                
+                for i in 1...stringInfo.count {
+                    _user.setValue(stringInfo[i-1], forKey: sKeys[i-1])
+                }
+                
+                for i in 1...numInfo.count {
+                    _user.setValue(numInfo[i-1], forKey: nKeys[i-1])
+                }
+                print (_user)
+            }
+                
         }
-        
-        for i in 1...numInfo.count {
-            _user.setValue(numInfo[i-1], forKey: nKeys[i-1])
-        }
-        
         
         // Commit the changes.
         do {
             try managedContext.save()
-            users[idNO-1] = _user
             
         } catch {
             // what to do if an error occurs?
@@ -250,8 +265,8 @@ class PersistenceService {
             let nserror = error as NSError
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
             abort()
+            }
         }
-    }
-    
 }
+
 
