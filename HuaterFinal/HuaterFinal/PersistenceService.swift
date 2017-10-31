@@ -165,6 +165,9 @@ class PersistenceService {
     }
     
     func isUser( email: String, pswd: String ) -> Bool {
+        if  users.count == 0 || email == "" || pswd == "" {
+            return false
+        }
         for i in 13...users.count {
             let u = self.getUser(index: i-1)
             if( u.email == email && u.pswd == pswd) {

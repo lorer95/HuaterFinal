@@ -38,6 +38,16 @@ class LogInViewController: UIViewController {
 
                 return true
             }
+            let alert2 = UIAlertController(title: "Incorrect Login",
+                                           message: "Please Enter Correct Information" ,
+                                           preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert2.addAction(UIAlertAction(title: "OK",
+                                           style: UIAlertActionStyle.default,
+                                           handler: nil))
+            
+            //UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+            present(alert2, animated: true, completion: nil)
             return false
         }
         return true
