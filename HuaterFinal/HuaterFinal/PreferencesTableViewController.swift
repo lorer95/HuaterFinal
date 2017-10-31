@@ -12,12 +12,23 @@ import CoreData
 class PreferencesTableViewController: UITableViewController {
 
     var user = [NSManagedObject]()
-    var idNO: Int!
+    var currentUser: appUser!
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Settings"
-
+        PersistenceService.shared.fetchUsers()
+        let defaults = UserDefaults.standard
+        let idNO = defaults.integer(forKey: "idNO")
+        
+        currentUser = PersistenceService.shared.getUser(index: idNO-1)
+        if currentUser.theme == "Night" {
+            self.view.backgroundColor = UIColor.lightGray
+        }
+        else {
+            self.view.backgroundColor = UIColor.white
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +38,18 @@ class PreferencesTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        PersistenceService.shared.fetchUsers()
+        let defaults = UserDefaults.standard
+        let idNO = defaults.integer(forKey: "idNO")
+        
+        currentUser = PersistenceService.shared.getUser(index: idNO-1)
+        if currentUser.theme == "Night" {
+            self.view.backgroundColor = UIColor.lightGray
+        }
+        else {
+            self.view.backgroundColor = UIColor.white
+        }
+        
         
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         
@@ -46,18 +69,12 @@ class PreferencesTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let indexPath = (tableView.indexPathForSelectedRow?.row)!
-        print(indexPath)
-        if (indexPath == 0) {
-            print ("HELLO")
-            let vc = segue.destination as! ShowUserInfoViewController
-            
-            vc.idNO = idNO
+       
             
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
-        }
+        
     }
 
 }

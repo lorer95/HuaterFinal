@@ -32,8 +32,7 @@ class ShowUserInfoViewController: UIViewController {
         let defaults = UserDefaults.standard
         let idNO = defaults.integer(forKey: "idNO")
 
-        print(idNO - 1)
-        currentUser = PersistenceService.shared.getUser(index:  idNO-1 )
+        currentUser = PersistenceService.shared.getUser(index:  idNO )
         
         self.emailLabel.text = currentUser.email
         self.fNameLabel.text = currentUser.fName
@@ -54,9 +53,13 @@ class ShowUserInfoViewController: UIViewController {
         let defaults = UserDefaults.standard
         let idNO = defaults.integer(forKey: "idNO")
 
-        currentUser = PersistenceService.shared.getUser(index:  idNO)
-        print(currentUser)
-        
+        currentUser = PersistenceService.shared.getUser(index:  idNO-1)
+        if currentUser.theme == "Night" {
+            self.view.backgroundColor = UIColor.lightGray
+        }
+        else {
+            self.view.backgroundColor = UIColor.white
+        }
         self.emailLabel.text = currentUser.email
         self.fNameLabel.text = currentUser.fName
         self.lNameLabel.text = currentUser.lName
@@ -64,8 +67,7 @@ class ShowUserInfoViewController: UIViewController {
         self.genderLabel.text = currentUser.gender
         self.weightLabel.text = String( currentUser.weight ) + " " + currentUser.metric
         self.nameTitleLabel.text = currentUser.fName + " " + currentUser.lName
-        print("appear")
-        
+  
     }
 
     override func didReceiveMemoryWarning() {

@@ -26,9 +26,6 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
     
     @IBAction func saveEdit(_ sender: Any) {
         
-        let defaults = UserDefaults.standard
-        let idNO = defaults.integer(forKey: "idNO")
-        
         if emailText.text?.characters.count == 0 || fNameText.text?.characters.count == 0 || lNameText.text?.characters.count == 0 {
             let alert3 = UIAlertController(title: "Message",
                                            message: "You must enter a value for all fields" ,
@@ -69,9 +66,10 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
         
             let stringInfo = [self.fNameText.text!, self.lNameText.text!, self.emailText.text!, currentUser.pswd, g, m, currentUser.theme]
             let numInfo = [ageTmp, Int(self.weight.text!)!]
-            print (self.fNameText.text!, self.lNameText.text!, self.emailText.text!, currentUser.pswd, g, m, currentUser.theme, idNO)
-            PersistenceService.shared.editUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
-            currentUser = PersistenceService.shared.getUser(index: idNO-1)
+            PersistenceService.shared.editUser(idNO: currentUser.idNO, stringInfo: stringInfo, numInfo: numInfo)
+            
+            currentUser = PersistenceService.shared.getUser(index: currentUser.idNO - 1)
+            
             self.nameTitle.text = currentUser.fName + " " + currentUser.lName
         }
     
@@ -79,6 +77,17 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        let idNO = defaults.integer(forKey: "idNO")
+        
+        currentUser = PersistenceService.shared.getUser(index: idNO-1)
+        
+        if currentUser.theme == "Night" {
+            self.view.backgroundColor = UIColor.lightGray
+        }
+        else {
+            self.view.backgroundColor = UIColor.white
+        }
         
         self.agePicker.delegate = self
         self.agePicker.dataSource = self
@@ -91,6 +100,8 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
         // Do any additional setup after loading the view.
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

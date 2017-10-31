@@ -76,7 +76,6 @@ class PersistenceService {
         
         let defaults = UserDefaults.standard
         let idNO = defaults.integer(forKey: "idNO")
-        
         if index < users.count {
             let p = users[index]
             let fN = p.value(forKey: "firstName") as! String
@@ -118,9 +117,9 @@ class PersistenceService {
         var theme = "<bad>"
         var a = -1
         var w = -1
-//        var idNO = -1
+
         
-        for i in 1...users.count {
+        for i in 13...users.count {
             let u = self.getUser(index: i-1)
 
             if( u.email == email && u.pswd == pswdText) {
@@ -135,7 +134,7 @@ class PersistenceService {
                 m = p.value(forKey: "metric") as! String
                 pswd = p.value(forKey: "pswd") as! String
                 theme = p.value(forKey: "theme") as! String
-//                idNO = p.value(forKey: "idNO") as! Int
+
             }
         }
             
@@ -168,14 +167,13 @@ class PersistenceService {
         guard let results = fetchedResults else { return }
         
         users = results
-        print(users)
     }
     
     func isUser( email: String, pswd: String ) -> Bool {
         if  users.count == 0 || email == "" || pswd == "" {
             return false
         }
-        for i in 1...users.count {
+        for i in 13...users.count {
             let u = self.getUser(index: i-1)
             if( u.email == email && u.pswd == pswd) {
                 return true
@@ -186,19 +184,30 @@ class PersistenceService {
     }
 
     func editUser( idNO: Int, stringInfo: [String], numInfo: [Int] ) { //pass in everything...
-        
+   
         let managedContext = persistentContainer.viewContext
         
         // Create the entity we want to save
-        
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "AppUser")
-        fetchRequest.predicate = NSPredicate(format: "idNO = %@", idNO)
+        fetchRequest.predicate = NSPredicate(format: "idNO = %@", idNO.description)
         
+        var fetchResults:[NSManagedObject]? = nil
         
-        if let fetchResults = managedContext.fetch(fetchRequest) as? [NSManagedObject] {
-            if fetchResults.count != 0{
+        do {
+            
+        try fetchResults = managedContext.fetch(fetchRequest) as? [NSManagedObject]
+        }
+        catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        if fetchResults != nil {
+            if fetchResults!.count != 0{
                 
-                let _user = fetchResults[0]
+                let _user = fetchResults![0]
                 
                 let sKeys = ["firstName", "lastName", "email", "pswd", "gender",  "metric", "theme"]
                 let nKeys = ["age", "weight"]
@@ -212,7 +221,6 @@ class PersistenceService {
                 for i in 1...numInfo.count {
                     _user.setValue(numInfo[i-1], forKey: nKeys[i-1])
                 }
-                print (_user)
             }
                 
         }

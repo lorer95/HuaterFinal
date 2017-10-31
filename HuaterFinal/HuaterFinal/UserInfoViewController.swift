@@ -25,10 +25,7 @@ class UserInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var ageTmp: Int = 0
     
     @IBAction func createAccount(_ sender: Any) {
-        
-        let defaults = UserDefaults.standard
-        var idNO = defaults.integer(forKey: "idNO")
-        
+   
         if firstName.text!.characters.count == 0 || lastName.text!.characters.count == 0 || email.text!.characters.count == 0 || pswdLabel.text!.characters.count == 0 {
             let alert = UIAlertController(title: "Message",
                                           message: "You must enter a value for all fields" ,
@@ -60,11 +57,12 @@ class UserInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 g = "Female"
             }
             
-            idNO = PersistenceService.shared.count() + 1
-            print(idNO)
+            let idNO = PersistenceService.shared.count() + 1
+            let defaults = UserDefaults.standard
+            defaults.set(idNO, forKey: "idNO")
+            
             let stringInfo = [firstName.text!, lastName.text!,email.text!, pswdLabel.text!, g, m, "Day" ]
             let numInfo = [ageTmp, Int( weight.text!)!]
-            
             
             PersistenceService.shared.saveUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
             
@@ -73,8 +71,9 @@ class UserInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         PersistenceService.shared.fetchUsers()
+        
+        
         self.age.delegate = self
         self.age.dataSource = self
         
