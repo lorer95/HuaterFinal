@@ -114,7 +114,7 @@ class PersistenceService {
         var w = -1
         var idNO = -1
         
-        for i in 13...users.count {
+        for i in 1...users.count {
             let u = self.getUser(index: i-1)
 
             if( u.email == email && u.pswd == pswdText) {
@@ -168,7 +168,7 @@ class PersistenceService {
         if  users.count == 0 || email == "" || pswd == "" {
             return false
         }
-        for i in 13...users.count {
+        for i in 1...users.count {
             let u = self.getUser(index: i-1)
             if( u.email == email && u.pswd == pswd) {
                 return true

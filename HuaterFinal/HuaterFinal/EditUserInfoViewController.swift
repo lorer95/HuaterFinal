@@ -26,30 +26,43 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
     var idNO: Int!
     
     @IBAction func saveEdit(_ sender: Any) {
-        
-        var m = ""
-        if metric.selectedSegmentIndex == 0 {
-            m = "Lbs"
+        if emailText.text?.characters.count == 0 || fNameText.text?.characters.count == 0 || lNameText.text?.characters.count == 0 {
+            let alert3 = UIAlertController(title: "Message",
+                                           message: "You must enter a value for all fields" ,
+                                           preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert3.addAction(UIAlertAction(title: "OK",
+                                           style: UIAlertActionStyle.default,
+                                           handler: nil))
+            
+            //UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+            present(alert3, animated: true, completion: nil)
         }
         else {
-            m = "Kg"
-        }
+            var m = ""
+            if metric.selectedSegmentIndex == 0 {
+                m = "Lbs"
+            }
+            else {
+                m = "Kg"
+            }
         
-        var g = ""
-        if gender.selectedSegmentIndex == 0 {
-            g = "Male"
-        }
-        else {
-            g = "Female"
-        }
+            var g = ""
+            if gender.selectedSegmentIndex == 0 {
+                g = "Male"
+            }
+            else {
+                g = "Female"
+            }
         
-        idNO = currentUser.idNO
-        let stringInfo = [self.fNameText.text!, self.lNameText.text!, self.emailText.text!, currentUser.pswd, g, m, currentUser.theme]
-        let numInfo = [ageTmp, Int(self.weight.text!)!]
+            idNO = currentUser.idNO
+            let stringInfo = [self.fNameText.text!, self.lNameText.text!, self.emailText.text!, currentUser.pswd, g, m, currentUser.theme]
+            let numInfo = [ageTmp, Int(self.weight.text!)!]
         
-        PersistenceService.shared.editUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
-        currentUser = PersistenceService.shared.getUser(index: idNO-1)
-        self.nameTitle.text = currentUser.fName + " " + currentUser.lName
+            PersistenceService.shared.editUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
+            currentUser = PersistenceService.shared.getUser(index: idNO-1)
+            self.nameTitle.text = currentUser.fName + " " + currentUser.lName
+        }
     
     }
     

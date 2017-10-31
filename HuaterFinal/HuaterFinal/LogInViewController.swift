@@ -58,7 +58,7 @@ class LogInViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "loginSegue" {
-            let pt = segue.destination as! PreferencesTableViewController
+            let pt = segue.destination as! MyViewController
             pt.idNO = idNO
         }
     

@@ -26,7 +26,6 @@ class ShowUserInfoViewController: UIViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         PersistenceService.shared.fetchUsers()

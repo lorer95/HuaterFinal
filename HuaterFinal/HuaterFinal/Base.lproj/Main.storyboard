@@ -67,7 +67,7 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="tryLogin:" destination="Ty1-qM-nC5" eventType="touchUpInside" id="BkJ-HZ-ea9"/>
-                                    <segue destination="25h-QG-6Tw" kind="show" identifier="loginSegue" id="PsJ-pt-ZIp"/>
+                                    <segue destination="ND7-cg-KLB" kind="showDetail" identifier="loginSegue" id="PsJ-pt-ZIp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfc-JW-sls">
@@ -212,7 +212,7 @@
                                 <state key="normal" title="Create Account"/>
                                 <connections>
                                     <action selector="createAccount:" destination="nWU-1P-maU" eventType="touchUpInside" id="tfJ-sG-HD2"/>
-                                    <segue destination="25h-QG-6Tw" kind="show" id="1OP-Ql-AEI"/>
+                                    <segue destination="ND7-cg-KLB" kind="showDetail" action="showViewController:sender:" id="1OP-Ql-AEI"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Huater 2-4" translatesAutoresizingMaskIntoConstraints="NO" id="Y1s-4T-5pG">
@@ -336,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jc-rD-KXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2277.5999999999999" y="887.40629685157433"/>
+            <point key="canvasLocation" x="1996" y="887"/>
         </scene>
         <!--Edit Settings View Controller-->
         <scene sceneID="PkR-28-TBA">
@@ -507,7 +507,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5u1-G3-MaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3383.1999999999998" y="115.59220389805098"/>
+            <point key="canvasLocation" x="3722.4000000000001" y="115.59220389805098"/>
         </scene>
         <!--Show User Info View Controller-->
         <scene sceneID="A3A-hs-OpP">
@@ -686,7 +686,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayN-m2-uXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4192.8000000000002" y="-385.45727136431788"/>
+            <point key="canvasLocation" x="4532" y="-385.45727136431788"/>
         </scene>
         <!--Edit User Info View Controller-->
         <scene sceneID="e1f-Ac-RVk">
@@ -876,7 +876,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9M-LI-InL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4976.8000000000002" y="-385.45727136431788"/>
+            <point key="canvasLocation" x="5316" y="-385.45727136431788"/>
+        </scene>
+        <!--My View Controller-->
+        <scene sceneID="bVk-fy-7M2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ND7-cg-KLB" customClass="MyViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SVY-BO-y46">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="25h-QG-6Tw" kind="relationship" relationship="rootViewController" id="K7l-aM-tdE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17e-iI-eCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2937" y="116"/>
         </scene>
     </scenes>
     <resources>
@@ -884,6 +902,6 @@
         <image name="Huater 2-4" width="1047" height="286"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PsJ-pt-ZIp"/>
+        <segue reference="1OP-Ql-AEI"/>
     </inferredMetricsTieBreakers>
 </document>
