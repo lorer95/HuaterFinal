@@ -102,7 +102,6 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
     }
     
 
-
     /*
     // MARK: - Navigation
 

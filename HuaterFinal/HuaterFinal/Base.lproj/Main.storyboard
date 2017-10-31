@@ -397,6 +397,9 @@
                                 <rect key="frame" x="20" y="382" width="335" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="saveAppBtn"/>
                                 <state key="normal" title="Save Preferences"/>
+                                <connections>
+                                    <action selector="btnSaveClicked:" destination="axj-J9-l3Z" eventType="touchUpInside" id="828-Kz-F6n"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uez-ep-egT" userLabel="newsSourceMenu">
                                 <rect key="frame" x="150" y="314" width="205" height="50"/>
@@ -437,6 +440,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HW2-ic-2bO"/>
                     </view>
+                    <connections>
+                        <outlet property="metricChange" destination="3Iz-Uy-ARk" id="CGE-5V-hkW"/>
+                        <outlet property="newsSource" destination="Uez-ep-egT" id="Fav-6u-TI4"/>
+                        <outlet property="saveClicked" destination="3TC-Oa-TEP" id="jj2-uI-Tc7"/>
+                        <outlet property="themeChange" destination="cPM-gf-7OO" id="o8L-5h-wCn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROl-he-Bjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
