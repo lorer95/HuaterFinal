@@ -217,7 +217,7 @@ class PersistenceService {
                 for i in 1...stringInfo.count {
                     _user.setValue(stringInfo[i-1], forKey: sKeys[i-1])
                 }
-                
+            
                 for i in 1...numInfo.count {
                     _user.setValue(numInfo[i-1], forKey: nKeys[i-1])
                 }

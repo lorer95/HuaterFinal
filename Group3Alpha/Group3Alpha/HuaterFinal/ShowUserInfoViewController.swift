@@ -37,7 +37,7 @@ class ShowUserInfoViewController: UIViewController {
         self.emailLabel.text = currentUser.email
         self.fNameLabel.text = currentUser.fName
         self.lNameLabel.text = currentUser.lName
-        self.ageLabel.text = String( currentUser.age )
+        self.ageLabel.text = String( currentUser.age)
         self.genderLabel.text = currentUser.gender
         self.weightLabel.text = String( currentUser.weight ) + " " + currentUser.metric
         self.nameTitleLabel.text = currentUser.fName + " " + currentUser.lName
@@ -63,7 +63,7 @@ class ShowUserInfoViewController: UIViewController {
         self.emailLabel.text = currentUser.email
         self.fNameLabel.text = currentUser.fName
         self.lNameLabel.text = currentUser.lName
-        self.ageLabel.text = String( currentUser.age )
+        self.ageLabel.text = String( currentUser.age)
         self.genderLabel.text = currentUser.gender
         self.weightLabel.text = String( currentUser.weight ) + " " + currentUser.metric
         self.nameTitleLabel.text = currentUser.fName + " " + currentUser.lName

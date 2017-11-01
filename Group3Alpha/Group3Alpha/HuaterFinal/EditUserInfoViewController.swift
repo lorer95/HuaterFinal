@@ -120,7 +120,7 @@ class EditUserInfoViewController: UIViewController,  UIPickerViewDelegate, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        ageTmp = Int( ageData[row] )! + 1
+        ageTmp = Int( ageData[row] )! 
     }
     
 
