@@ -58,7 +58,6 @@ class LogInViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "loginSegue" {
-            print ("HEY")
             let defaults = UserDefaults.standard
             defaults.set(idNO, forKey: "idNO")
         }

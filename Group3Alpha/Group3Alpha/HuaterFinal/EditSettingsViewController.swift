@@ -79,9 +79,18 @@ class EditSettingsViewController: UIViewController {
         
         if currentUser.theme == "Night" {
             self.view.backgroundColor = UIColor.lightGray
+            themeChange.selectedSegmentIndex = 1
         }
         else {
             self.view.backgroundColor = UIColor.white
+            themeChange.selectedSegmentIndex = 0
+        }
+        
+        if currentUser.metric == "Lbs" {
+            metricChange.selectedSegmentIndex = 0
+        }
+        else {
+            metricChange.selectedSegmentIndex = 1
         }
 
         // Do any additional setup after loading the view.
