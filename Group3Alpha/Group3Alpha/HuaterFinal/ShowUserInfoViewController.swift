@@ -19,7 +19,7 @@ class ShowUserInfoViewController: UIViewController {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var nameTitleLabel: UILabel!
     
-    var idNO: Int!
+
     var currentUser: appUser!
     
     @IBAction func editClicked(_ sender: Any) {
@@ -75,18 +75,7 @@ class ShowUserInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-            let vc = segue.destination as! EditUserInfoViewController
-            
-            vc.currentUser = currentUser
-            
-            let backItem = UIBarButtonItem()
-            backItem.title = "Back"
-            navigationItem.backBarButtonItem = backItem
-        
-    }
+
 
     /*
     // MARK: - Navigation
