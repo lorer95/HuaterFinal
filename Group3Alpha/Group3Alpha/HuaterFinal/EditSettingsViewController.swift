@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class EditSettingsViewController: UIViewController {
 
@@ -92,10 +93,31 @@ class EditSettingsViewController: UIViewController {
         else {
             metricChange.selectedSegmentIndex = 1
         }
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler:
+            {didAllow, error in
+                
+        })
 
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func notificationSwitch(_ sender: Any) {
+        
+        let content = UNMutableNotificationContent()
+        
+        content.title = "Hey! Drink Water!"
+        content.subtitle = "Remember to stay hidrated!"
+        content.body = "Don't forget to log in your daily water intake"
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

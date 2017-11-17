@@ -29,6 +29,7 @@ class PreferencesTableViewController: UITableViewController {
         else {
             self.view.backgroundColor = UIColor.white
         }
+
     }
 
     override func didReceiveMemoryWarning() {
