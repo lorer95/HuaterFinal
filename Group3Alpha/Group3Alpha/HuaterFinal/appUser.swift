@@ -82,6 +82,8 @@ class appUser {
         set (value) {_idNO = value}
     }
     
+    
+    
     init( idNO: Int, stringInfo: [String], numInfo: [Int]) {
         
         self._idNO = idNO
@@ -96,6 +98,7 @@ class appUser {
         
         self._age = numInfo[0]
         self._weight = numInfo[1]
+   
         
     }
     

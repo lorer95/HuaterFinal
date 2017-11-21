@@ -117,7 +117,6 @@ class PersistenceService {
         var theme = "<bad>"
         var a = -1
         var w = -1
-
         
         for i in 1...users.count {
             let u = self.getUser(index: i-1)
@@ -141,7 +140,7 @@ class PersistenceService {
             let stringInfo = [fN, lN, e, pswd, g, m, theme]
             let numInfo = [a, w]
             
-            return appUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
+        return appUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
         
     }
     

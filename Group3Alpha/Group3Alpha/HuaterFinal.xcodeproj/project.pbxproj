@@ -13,6 +13,8 @@
 		3B05E5E71FA6899E00560F2F /* EditSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E5E61FA6899E00560F2F /* EditSettingsViewController.swift */; };
 		3B05E5E91FA6997100560F2F /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E5E81FA6997100560F2F /* PersistenceService.swift */; };
 		3B05E5ED1FA69A1B00560F2F /* appUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E5EC1FA69A1B00560F2F /* appUser.swift */; };
+		3B7A19131FC3820400A4F3A2 /* IntakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A19121FC3820400A4F3A2 /* IntakeViewController.swift */; };
+		3B7A19151FC38B9700A4F3A2 /* DailyTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A19141FC38B9700A4F3A2 /* DailyTrackerViewController.swift */; };
 		3BA0C82F1FB52CE000AEE12C /* EditUserInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA0C82E1FB52CE000AEE12C /* EditUserInfoTableViewController.swift */; };
 		A12154E31FA8109E00D5FF6A /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12154E21FA8109E00D5FF6A /* MyViewController.swift */; };
 		A15C41F81F9D3EF7005B63FF /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */; };
@@ -31,6 +33,8 @@
 		3B05E5E61FA6899E00560F2F /* EditSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSettingsViewController.swift; sourceTree = "<group>"; };
 		3B05E5E81FA6997100560F2F /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		3B05E5EC1FA69A1B00560F2F /* appUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appUser.swift; sourceTree = "<group>"; };
+		3B7A19121FC3820400A4F3A2 /* IntakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntakeViewController.swift; sourceTree = "<group>"; };
+		3B7A19141FC38B9700A4F3A2 /* DailyTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTrackerViewController.swift; sourceTree = "<group>"; };
 		3BA0C82E1FB52CE000AEE12C /* EditUserInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserInfoTableViewController.swift; sourceTree = "<group>"; };
 		A12154E21FA8109E00D5FF6A /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				A1B955FB1F9AD3C700E2F9EA /* Assets.xcassets */,
 				A1B956001F9AD3C700E2F9EA /* Info.plist */,
 				A1B955F81F9AD3C700E2F9EA /* HuaterFinal.xcdatamodeld */,
+				3B7A19121FC3820400A4F3A2 /* IntakeViewController.swift */,
+				3B7A19141FC38B9700A4F3A2 /* DailyTrackerViewController.swift */,
 			);
 			path = HuaterFinal;
 			sourceTree = "<group>";
@@ -170,9 +176,11 @@
 				A15C41F81F9D3EF7005B63FF /* PreferencesTableViewController.swift in Sources */,
 				A1B955FA1F9AD3C700E2F9EA /* HuaterFinal.xcdatamodeld in Sources */,
 				3B05E5ED1FA69A1B00560F2F /* appUser.swift in Sources */,
+				3B7A19131FC3820400A4F3A2 /* IntakeViewController.swift in Sources */,
 				A1D50DB11FBCC88000B55F17 /* TabBarViewController.swift in Sources */,
 				3B05E5E11FA6887700560F2F /* LogInViewController.swift in Sources */,
 				0A3FB7191FA10D0E0018B70A /* UserInfoViewController.swift in Sources */,
+				3B7A19151FC38B9700A4F3A2 /* DailyTrackerViewController.swift in Sources */,
 				A1B955F21F9AD3C700E2F9EA /* AppDelegate.swift in Sources */,
 				A12154E31FA8109E00D5FF6A /* MyViewController.swift in Sources */,
 				3B05E5E71FA6899E00560F2F /* EditSettingsViewController.swift in Sources */,
