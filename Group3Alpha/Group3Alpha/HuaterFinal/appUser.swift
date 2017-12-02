@@ -31,6 +31,7 @@ class appUser {
     var _pswd: String = ""
     var _theme: String = ""
     var _idNO: Int = 0
+    var _water: Int = 0
     
     var fName:String {
         get { return _fName }
@@ -82,6 +83,13 @@ class appUser {
         set (value) {_idNO = value}
     }
     
+    var water:Int {
+        get {return _water}
+        set (value) {_water = value }
+        
+    }
+    
+    
     
     
     init( idNO: Int, stringInfo: [String], numInfo: [Int]) {
@@ -98,7 +106,7 @@ class appUser {
         
         self._age = numInfo[0]
         self._weight = numInfo[1]
-   
+        self._water = numInfo[2]
         
     }
     

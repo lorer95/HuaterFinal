@@ -113,9 +113,10 @@ class EditUserInfoTableViewController: UITableViewController {
             
             let stringInfo = [self.infoEdit[0], self.infoEdit[1], self.currentUser.email, self.infoEdit[2], self.infoEdit[3], self.currentUser.metric, self.currentUser.theme]
             
-            let numInfo = [ Int(self.infoEdit[4]) , Int(self.infoEdit[5]) ]
+            let numInfo = [ Int(self.infoEdit[4]) , Int(self.infoEdit[5]), self.currentUser.water,]
             
             PersistenceService.shared.editUser(idNO: self.currentUser.idNO, stringInfo: stringInfo, numInfo: numInfo as! [Int])
+            
             self.currentUser = PersistenceService.shared.getUser(index: self.currentUser.idNO)
             self.tableView.reloadData()
         

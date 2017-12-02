@@ -16,6 +16,7 @@
 		3B7A19131FC3820400A4F3A2 /* IntakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A19121FC3820400A4F3A2 /* IntakeViewController.swift */; };
 		3B7A19151FC38B9700A4F3A2 /* DailyTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A19141FC38B9700A4F3A2 /* DailyTrackerViewController.swift */; };
 		3BA0C82F1FB52CE000AEE12C /* EditUserInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA0C82E1FB52CE000AEE12C /* EditUserInfoTableViewController.swift */; };
+		3BEC4DC51FD34A22000825D0 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC4DC41FD34A22000825D0 /* NewsViewController.swift */; };
 		A12154E31FA8109E00D5FF6A /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12154E21FA8109E00D5FF6A /* MyViewController.swift */; };
 		A15C41F81F9D3EF7005B63FF /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */; };
 		A1B955F21F9AD3C700E2F9EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B955F11F9AD3C700E2F9EA /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 		3B7A19121FC3820400A4F3A2 /* IntakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntakeViewController.swift; sourceTree = "<group>"; };
 		3B7A19141FC38B9700A4F3A2 /* DailyTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTrackerViewController.swift; sourceTree = "<group>"; };
 		3BA0C82E1FB52CE000AEE12C /* EditUserInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserInfoTableViewController.swift; sourceTree = "<group>"; };
+		3BEC4DC41FD34A22000825D0 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A12154E21FA8109E00D5FF6A /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
 		A1B955EE1F9AD3C700E2F9EA /* HuaterFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaterFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 				A1B955F81F9AD3C700E2F9EA /* HuaterFinal.xcdatamodeld */,
 				3B7A19121FC3820400A4F3A2 /* IntakeViewController.swift */,
 				3B7A19141FC38B9700A4F3A2 /* DailyTrackerViewController.swift */,
+				3BEC4DC41FD34A22000825D0 /* NewsViewController.swift */,
 			);
 			path = HuaterFinal;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				3BA0C82F1FB52CE000AEE12C /* EditUserInfoTableViewController.swift in Sources */,
 				A15C41F81F9D3EF7005B63FF /* PreferencesTableViewController.swift in Sources */,
 				A1B955FA1F9AD3C700E2F9EA /* HuaterFinal.xcdatamodeld in Sources */,
+				3BEC4DC51FD34A22000825D0 /* NewsViewController.swift in Sources */,
 				3B05E5ED1FA69A1B00560F2F /* appUser.swift in Sources */,
 				3B7A19131FC3820400A4F3A2 /* IntakeViewController.swift in Sources */,
 				A1D50DB11FBCC88000B55F17 /* TabBarViewController.swift in Sources */,

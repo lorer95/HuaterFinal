@@ -50,6 +50,8 @@ class PersistenceService {
     
     // MARK: - Core Data support
     
+    
+    
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -72,6 +74,9 @@ class PersistenceService {
         return users.count
     }
     
+    
+    
+    
     func getUser(index:Int) -> appUser {
         
         let defaults = UserDefaults.standard
@@ -88,20 +93,24 @@ class PersistenceService {
             let pswd = p.value(forKey: "pswd") as! String
             let theme = p.value(forKey: "theme") as! String
             let idNO = p.value(forKey: "idNO") as! Int
+            let water = p.value(forKey: "water") as! Int
             
             let stringInfo = [fN, lN, e, pswd, g, m, theme]
-            let numInfo = [a, w]
+            let numInfo = [a, w, water]
             
             return appUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
             
             
         } else {
             let stringInfo = ["<bad>", "<bad>", "<bad>", "<bad>", "<bad>", "<bad>", "<bad>"]
-            let numInfo = [0, 0]
+            let numInfo = [0, 0, 0]
             
             return appUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
+            
         }
     }
+    
+    
     
     func getSignedInUser(email:String, pswdText: String ) -> appUser {
         
@@ -117,6 +126,7 @@ class PersistenceService {
         var theme = "<bad>"
         var a = -1
         var w = -1
+        var water = 0
         
         for i in 1...users.count {
             let u = self.getUser(index: i-1)
@@ -133,12 +143,14 @@ class PersistenceService {
                 m = p.value(forKey: "metric") as! String
                 pswd = p.value(forKey: "pswd") as! String
                 theme = p.value(forKey: "theme") as! String
+                water = p.value(forKey: "water") as! Int
+                
 
             }
         }
             
             let stringInfo = [fN, lN, e, pswd, g, m, theme]
-            let numInfo = [a, w]
+            let numInfo = [a, w, water]
             
         return appUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
         
@@ -168,21 +180,26 @@ class PersistenceService {
         users = results
     }
     
+    
+    
     func isUser( email: String, pswd: String ) -> Bool {
         if  users.count == 0 || email == "" || pswd == "" {
+
             return false
         }
+        
         for i in 1...users.count {
             let u = self.getUser(index: i-1)
             if( u.email == email && u.pswd == pswd) {
                 return true
             }
-            
         }
         return false
     }
 
-    func editUser( idNO: Int, stringInfo: [String], numInfo: [Int] ) { //pass in everything...
+    
+    
+    func editUser( idNO: Int, stringInfo: [String], numInfo: [Int]) { //pass in everything...
    
         let managedContext = persistentContainer.viewContext
         
@@ -209,7 +226,7 @@ class PersistenceService {
                 let _user = fetchResults![0]
                 
                 let sKeys = ["firstName", "lastName", "email", "pswd", "gender",  "metric", "theme"]
-                let nKeys = ["age", "weight"]
+                let nKeys = ["age", "weight", "water"]
                 
                 _user.setValue(idNO, forKey: "idNO")
                 
@@ -238,6 +255,8 @@ class PersistenceService {
         
     }
     
+    
+    
     func saveUser(idNO: Int, stringInfo: [String], numInfo: [Int]) {
         
         let managedContext = persistentContainer.viewContext
@@ -248,7 +267,7 @@ class PersistenceService {
         let _user = NSManagedObject(entity: entity!, insertInto:managedContext)
         
         let sKeys = ["firstName", "lastName", "email", "pswd", "gender",  "metric", "theme"]
-        let nKeys = ["age", "weight"]
+        let nKeys = ["age", "weight", "water"]
         
         
         _user.setValue(idNO, forKey: "idNO")
@@ -275,5 +294,4 @@ class PersistenceService {
             }
         }
 }
-
 

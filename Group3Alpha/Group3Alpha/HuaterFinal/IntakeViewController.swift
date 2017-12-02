@@ -14,6 +14,7 @@ class IntakeViewController: UIViewController {
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var saveDataBtn: UIButton!
     
+    var idNO = 0;
     var currentUser: appUser!
     var i: Double = 0
     var units: String = ""
@@ -27,6 +28,13 @@ class IntakeViewController: UIViewController {
     
     @IBAction func saveBtnClicked(_ sender: Any) {
         
+        let water = Int(stepperBtm.value) + currentUser.water
+        
+        let stringInfo = [currentUser.fName, currentUser.lName, currentUser.email, currentUser.pswd, currentUser.gender, currentUser.metric, currentUser.theme]
+        let numInfo = [currentUser.age, currentUser.weight, water]
+        
+        
+        PersistenceService.shared.editUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
         
         let alert = UIAlertController(title: "Success!",
                                       message: "Your water intake have been saved" ,
@@ -38,6 +46,7 @@ class IntakeViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         
         stepperBtm.value = 0
+        
     }
     
     
@@ -46,7 +55,7 @@ class IntakeViewController: UIViewController {
 
         PersistenceService.shared.fetchUsers()
         let defaults = UserDefaults.standard
-        let idNO = defaults.integer(forKey: "idNO")
+        idNO = defaults.integer(forKey: "idNO")
         
         currentUser = PersistenceService.shared.getUser(index:  idNO-1)
         if currentUser.theme == "Night" {

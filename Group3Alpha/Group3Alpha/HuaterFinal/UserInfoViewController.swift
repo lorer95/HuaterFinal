@@ -62,9 +62,10 @@ class UserInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             defaults.set(idNO, forKey: "idNO")
             
             let stringInfo = [firstName.text!, lastName.text!,email.text!, pswdLabel.text!, g, m, "Day" ]
-            let numInfo = [ageTmp, Int( weight.text!)!]
+            let numInfo = [ageTmp, Int( weight.text!)!, 0]
             
             PersistenceService.shared.saveUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
+            
             
         }
     }

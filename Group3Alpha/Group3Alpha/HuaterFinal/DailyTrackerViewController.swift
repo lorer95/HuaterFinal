@@ -23,6 +23,9 @@ class DailyTrackerViewController: UIViewController {
         PersistenceService.shared.fetchUsers()
         let defaults = UserDefaults.standard
         let idNO = defaults.integer(forKey: "idNO")
+        var waterReq: Double = 0
+        var percentLeft: Double = 0
+        
         
         currentUser = PersistenceService.shared.getUser(index:  idNO-1)
         if currentUser.theme == "Night" {
@@ -34,9 +37,11 @@ class DailyTrackerViewController: UIViewController {
         
         if currentUser.metric == "Kg" {
             units = "mL"
+            waterReq = Double(currentUser.weight)*45.5318 - 118.28
         }
         else {
             units = "oz"
+            waterReq = 0.7*Double(currentUser.weight) - 4
         }
         
         let date = Date()
@@ -45,17 +50,30 @@ class DailyTrackerViewController: UIViewController {
         formatter.dateFormat = "MMMM d, yyyy"
         
         dateLbl.text = formatter.string(from: date)
-        msgLbl.text = "Keep Drinking Water!"
-        percentLbl.text = "0.0%"
+        
+        percentLeft = Double(currentUser.water)/waterReq
+        percentLbl.text = String(percentLeft*100) + "%"
+        
+        if(percentLeft < 1){
+            msgLbl.text = "Keep Drinking Water!"
+        }
+        else{
+            msgLbl.text = "You're Done for the Day!"
+        }
+    
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+      
         PersistenceService.shared.fetchUsers()
         let defaults = UserDefaults.standard
         let idNO = defaults.integer(forKey: "idNO")
+        var waterReq: Double = 0
+        var percentLeft: Double = 0
+        
         
         currentUser = PersistenceService.shared.getUser(index:  idNO-1)
         if currentUser.theme == "Night" {
@@ -67,9 +85,11 @@ class DailyTrackerViewController: UIViewController {
         
         if currentUser.metric == "Kg" {
             units = "mL"
+            waterReq = Double(currentUser.weight)*45.5318 - 118.28
         }
         else {
             units = "oz"
+            waterReq = 0.7*Double(currentUser.weight) - 4
         }
         
         let date = Date()
@@ -79,8 +99,15 @@ class DailyTrackerViewController: UIViewController {
         
         dateLbl.text = formatter.string(from: date)
         
-        msgLbl.text = "Keep Drinking Water!"
-        percentLbl.text = "0.0%"
+        percentLeft = Double(currentUser.water)/waterReq
+        percentLbl.text = String(percentLeft*100) + "%"
+        
+        if(percentLeft < 1){
+            msgLbl.text = "Keep Drinking Water!"
+        }
+        else{
+            msgLbl.text = "You're Done for the Day!"
+        }
         
     }
     

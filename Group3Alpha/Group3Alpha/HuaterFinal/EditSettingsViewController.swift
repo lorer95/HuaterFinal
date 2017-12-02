@@ -31,6 +31,7 @@ class EditSettingsViewController: UIViewController {
 
         var m: String
         var w: Int
+        var water: Int = currentUser.water
 
         if metricChange.selectedSegmentIndex == 0 {
             m = "Lbs"
@@ -47,9 +48,11 @@ class EditSettingsViewController: UIViewController {
         else {
             if m == "Lbs" {
                 w = Int(Double(currentUser.weight) * 2.2)
+                water = Int(Double(water)/29.5735)
             }
             else {
                 w = Int(Double(currentUser.weight) / 2.2)
+                water = Int(Double(water)*29.5735)
             }
         }
         
@@ -66,9 +69,10 @@ class EditSettingsViewController: UIViewController {
         }
        
         let stringInfo = [currentUser.fName, currentUser.lName, currentUser.email, currentUser.pswd, currentUser.gender, m, t]
-        let numInfo = [currentUser.age, w]
+        let numInfo = [currentUser.age, w, water]
     
         PersistenceService.shared.editUser(idNO: currentUser.idNO, stringInfo: stringInfo, numInfo: numInfo)
+        
 
     }
     
