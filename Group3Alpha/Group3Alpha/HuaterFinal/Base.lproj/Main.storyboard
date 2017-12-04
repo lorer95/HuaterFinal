@@ -924,7 +924,7 @@
         <scene sceneID="bVk-fy-7M2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ND7-cg-KLB" customClass="MyViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-water-50" id="AM6-SS-kmB"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-50" id="AM6-SS-kmB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SVY-BO-y46">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1033,10 +1033,12 @@
         <image name="Huater 2-2" width="1204" height="1204"/>
         <image name="Huater 2-4" width="1047" height="286"/>
         <image name="icons8-news-50" width="25" height="25"/>
+        <image name="icons8-settings-50" width="25" height="25"/>
         <image name="icons8-summary-list-50" width="25" height="25"/>
         <image name="icons8-water-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="K7l-aM-tdE"/>
         <segue reference="tqa-DN-ZeX"/>
         <segue reference="VRX-UX-ahd"/>
     </inferredMetricsTieBreakers>
