@@ -816,7 +816,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vcz-mx-vG6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Summary" id="A8U-B1-1sV"/>
+                    <tabBarItem key="tabBarItem" title="Summary" image="icons8-summary-list-50" id="A8U-B1-1sV"/>
                     <connections>
                         <outlet property="dateLbl" destination="BcN-ue-QNa" id="yad-D7-E8Q"/>
                         <outlet property="msgLbl" destination="Yt6-4W-0F9" id="EZj-uk-I0N"/>
@@ -888,7 +888,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fIa-xq-zty"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Input" id="okA-6q-26c"/>
+                    <tabBarItem key="tabBarItem" title="Input" image="icons8-water-50" id="okA-6q-26c"/>
                     <connections>
                         <outlet property="dateLbl" destination="WHZ-oH-kR3" id="vN3-3G-N0Q"/>
                         <outlet property="intakeLbl" destination="zAg-Fn-sy8" id="Nmx-Sz-OCk"/>
@@ -924,7 +924,7 @@
         <scene sceneID="bVk-fy-7M2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ND7-cg-KLB" customClass="MyViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="AM6-SS-kmB"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-water-50" id="AM6-SS-kmB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SVY-BO-y46">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1022,7 +1022,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GPb-iL-6dZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" id="eP7-oF-XNV"/>
+                    <tabBarItem key="tabBarItem" title="News" image="icons8-news-50" id="eP7-oF-XNV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBL-P5-J53" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1032,6 +1032,9 @@
     <resources>
         <image name="Huater 2-2" width="1204" height="1204"/>
         <image name="Huater 2-4" width="1047" height="286"/>
+        <image name="icons8-news-50" width="25" height="25"/>
+        <image name="icons8-summary-list-50" width="25" height="25"/>
+        <image name="icons8-water-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tqa-DN-ZeX"/>
