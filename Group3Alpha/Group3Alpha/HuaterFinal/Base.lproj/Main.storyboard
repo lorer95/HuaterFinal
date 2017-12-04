@@ -1038,7 +1038,6 @@
         <image name="icons8-water-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="K7l-aM-tdE"/>
         <segue reference="tqa-DN-ZeX"/>
         <segue reference="VRX-UX-ahd"/>
     </inferredMetricsTieBreakers>
