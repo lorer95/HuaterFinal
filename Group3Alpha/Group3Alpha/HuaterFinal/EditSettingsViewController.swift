@@ -71,12 +71,10 @@ class EditSettingsViewController: UIViewController {
         var n: String
         
         if newsChange.selectedSegmentIndex == 0 {
-        n = "Medical News Today"
-        self.view.backgroundColor = UIColor.white
+            n = "Medical News Today"
         }
         else {
-        n = "Health.com"
-        self.view.backgroundColor = UIColor.lightGray
+            n = "Health.com"
         }
     
         let stringInfo = [currentUser.fName, currentUser.lName, currentUser.email, currentUser.pswd, currentUser.gender, m, t, n]

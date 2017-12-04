@@ -20,7 +20,12 @@ class IntakeViewController: UIViewController {
     var units: String = ""
     
     @IBAction func steppedBtn(_ sender: Any) {
-        i = stepperBtm.value * 10
+        if currentUser.metric == "Kg" {
+            i = stepperBtm.value*10
+        }
+        else {
+            i = stepperBtm.value/2
+        }
         
         intakeLbl.text = String(i) + " " + units
     }
@@ -28,7 +33,13 @@ class IntakeViewController: UIViewController {
     
     @IBAction func saveBtnClicked(_ sender: Any) {
         
-        let water = Int(stepperBtm.value) + currentUser.water
+        var water: Int = 0
+        if currentUser.metric == "Kg" {
+            water = Int(stepperBtm.value*10) + currentUser.water
+        }
+        else {
+            water = Int(stepperBtm.value/2) + currentUser.water
+        }
         
         let stringInfo = [currentUser.fName, currentUser.lName, currentUser.email, currentUser.pswd, currentUser.gender, currentUser.metric, currentUser.theme]
         let numInfo = [currentUser.age, currentUser.weight, water]

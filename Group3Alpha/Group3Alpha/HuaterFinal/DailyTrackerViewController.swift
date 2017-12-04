@@ -51,8 +51,9 @@ class DailyTrackerViewController: UIViewController {
         
         dateLbl.text = formatter.string(from: date)
         
-        percentLeft = Double(currentUser.water)/waterReq
-        percentLbl.text = String(round(percentLeft*1000)/10) + "%"
+        percentLeft = 100*Double(currentUser.water)/waterReq
+        percentLeft = round(percentLeft*10)/10
+        percentLbl.text = String(percentLeft) + "%"
         
         if(percentLeft < 1){
             msgLbl.text = "Keep Drinking Water!"
@@ -99,8 +100,9 @@ class DailyTrackerViewController: UIViewController {
         
         dateLbl.text = formatter.string(from: date)
         
-        percentLeft = Double(currentUser.water)/waterReq
-        percentLbl.text = String(round(percentLeft*1000)/10) + "%"
+        percentLeft = 100*Double(currentUser.water)/waterReq
+        percentLeft = round(percentLeft*10)/10
+        percentLbl.text = String(percentLeft) + "%"
         
         if(percentLeft < 1){
             msgLbl.text = "Keep Drinking Water!"
