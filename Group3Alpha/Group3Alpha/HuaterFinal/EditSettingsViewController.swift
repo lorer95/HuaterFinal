@@ -13,8 +13,8 @@ import UserNotifications
 class EditSettingsViewController: UIViewController {
 
     @IBOutlet weak var themeChange: UISegmentedControl!
+    @IBOutlet weak var newsChange: UISegmentedControl!
     @IBOutlet weak var metricChange: UISegmentedControl!
-    @IBOutlet weak var newsSource: UIPickerView!
     
     var currentUser: appUser!
     
@@ -67,8 +67,19 @@ class EditSettingsViewController: UIViewController {
             t = "Night"
             self.view.backgroundColor = UIColor.lightGray
         }
-       
-        let stringInfo = [currentUser.fName, currentUser.lName, currentUser.email, currentUser.pswd, currentUser.gender, m, t]
+        
+        var n: String
+        
+        if newsChange.selectedSegmentIndex == 0 {
+        n = "Medical News Today"
+        self.view.backgroundColor = UIColor.white
+        }
+        else {
+        n = "Health.com"
+        self.view.backgroundColor = UIColor.lightGray
+        }
+    
+        let stringInfo = [currentUser.fName, currentUser.lName, currentUser.email, currentUser.pswd, currentUser.gender, m, t, n]
         let numInfo = [currentUser.age, w, water]
     
         PersistenceService.shared.editUser(idNO: currentUser.idNO, stringInfo: stringInfo, numInfo: numInfo)

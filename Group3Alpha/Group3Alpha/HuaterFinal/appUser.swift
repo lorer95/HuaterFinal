@@ -32,6 +32,7 @@ class appUser {
     var _theme: String = ""
     var _idNO: Int = 0
     var _water: Int = 0
+    var _news: String = ""
     
     var fName:String {
         get { return _fName }
@@ -89,6 +90,11 @@ class appUser {
         
     }
     
+    var news:String {
+        get {return _news}
+        set (value) {_news = value }
+        
+    }
     
     
     
@@ -103,6 +109,7 @@ class appUser {
         self._gender = stringInfo[4]
         self._metric = stringInfo[5]
         self._theme = stringInfo[6]
+        self._news = stringInfo[7]
         
         self._age = numInfo[0]
         self._weight = numInfo[1]

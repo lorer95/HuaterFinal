@@ -94,15 +94,16 @@ class PersistenceService {
             let theme = p.value(forKey: "theme") as! String
             let idNO = p.value(forKey: "idNO") as! Int
             let water = p.value(forKey: "water") as! Int
+            let n = p.value(forKey: "news") as! String
             
-            let stringInfo = [fN, lN, e, pswd, g, m, theme]
+            let stringInfo = [fN, lN, e, pswd, g, m, theme, n]
             let numInfo = [a, w, water]
             
             return appUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
             
             
         } else {
-            let stringInfo = ["<bad>", "<bad>", "<bad>", "<bad>", "<bad>", "<bad>", "<bad>"]
+            let stringInfo = ["<bad>", "<bad>", "<bad>", "<bad>", "<bad>", "<bad>", "<bad>", "<bad>"]
             let numInfo = [0, 0, 0]
             
             return appUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
@@ -124,6 +125,7 @@ class PersistenceService {
         var g = "<bad>"
         var m = "<bad>"
         var theme = "<bad>"
+        var n = "<bad>"
         var a = -1
         var w = -1
         var water = 0
@@ -144,12 +146,13 @@ class PersistenceService {
                 pswd = p.value(forKey: "pswd") as! String
                 theme = p.value(forKey: "theme") as! String
                 water = p.value(forKey: "water") as! Int
+                n = p.value(forKey: "news") as! String
                 
 
             }
         }
             
-            let stringInfo = [fN, lN, e, pswd, g, m, theme]
+            let stringInfo = [fN, lN, e, pswd, g, m, theme, n]
             let numInfo = [a, w, water]
             
         return appUser(idNO: idNO, stringInfo: stringInfo, numInfo: numInfo)
@@ -225,7 +228,7 @@ class PersistenceService {
                 
                 let _user = fetchResults![0]
                 
-                let sKeys = ["firstName", "lastName", "email", "pswd", "gender",  "metric", "theme"]
+                let sKeys = ["firstName", "lastName", "email", "pswd", "gender",  "metric", "theme", "news"]
                 let nKeys = ["age", "weight", "water"]
                 
                 _user.setValue(idNO, forKey: "idNO")
@@ -266,7 +269,7 @@ class PersistenceService {
         
         let _user = NSManagedObject(entity: entity!, insertInto:managedContext)
         
-        let sKeys = ["firstName", "lastName", "email", "pswd", "gender",  "metric", "theme"]
+        let sKeys = ["firstName", "lastName", "email", "pswd", "gender",  "metric", "theme", "news"]
         let nKeys = ["age", "weight", "water"]
         
         
