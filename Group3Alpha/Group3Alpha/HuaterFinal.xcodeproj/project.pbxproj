@@ -40,7 +40,7 @@
 		3BEC4DC41FD34A22000825D0 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A12154E21FA8109E00D5FF6A /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		A15C41F71F9D3EF7005B63FF /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
-		A1B955EE1F9AD3C700E2F9EA /* HuaterFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaterFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B955EE1F9AD3C700E2F9EA /* Huater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B955F11F9AD3C700E2F9EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1B955F61F9AD3C700E2F9EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1B955F91F9AD3C700E2F9EA /* HuaterFinal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HuaterFinal.xcdatamodel; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		A1B955EF1F9AD3C700E2F9EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1B955EE1F9AD3C700E2F9EA /* HuaterFinal.app */,
+				A1B955EE1F9AD3C700E2F9EA /* Huater.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 			);
 			name = HuaterFinal;
 			productName = HuaterFinal;
-			productReference = A1B955EE1F9AD3C700E2F9EA /* HuaterFinal.app */;
+			productReference = A1B955EE1F9AD3C700E2F9EA /* Huater.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -330,7 +330,7 @@
 				INFOPLIST_FILE = HuaterFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cs329E.HuaterFinal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Huater;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,7 +344,7 @@
 				INFOPLIST_FILE = HuaterFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cs329E.HuaterFinal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Huater;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

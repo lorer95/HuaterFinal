@@ -13,7 +13,7 @@
         <!--Log In View Controller-->
         <scene sceneID="6Yg-da-tIk">
             <objects>
-                <viewController id="Ty1-qM-nC5" customClass="LogInViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ty1-qM-nC5" customClass="LogInViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NI2-IP-bEe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
         <!--User Info View Controller-->
         <scene sceneID="OAe-eY-jDX">
             <objects>
-                <viewController id="nWU-1P-maU" customClass="UserInfoViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nWU-1P-maU" customClass="UserInfoViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HJ6-EN-6oi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -340,13 +340,13 @@
         <!--Edit Settings View Controller-->
         <scene sceneID="PkR-28-TBA">
             <objects>
-                <viewController id="axj-J9-l3Z" customClass="EditSettingsViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="axj-J9-l3Z" customClass="EditSettingsViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3FD-gD-h5l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-VN-Viq">
-                                <rect key="frame" x="20" y="227" width="53" height="21"/>
+                                <rect key="frame" x="20" y="276" width="53" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="2Fd-yC-lYl"/>
                                 </constraints>
@@ -355,58 +355,58 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Source:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJo-dp-wTM">
-                                <rect key="frame" x="20" y="279" width="110" height="21"/>
+                                <rect key="frame" x="20" y="328" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cPM-gf-7OO" userLabel="themesButton">
-                                <rect key="frame" x="110" y="170" width="167" height="29"/>
+                                <rect key="frame" x="110" y="219" width="167" height="29"/>
                                 <segments>
                                     <segment title="Day"/>
                                     <segment title="Night"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3Iz-Uy-ARk" userLabel="metricsButton2">
-                                <rect key="frame" x="110" y="220" width="167" height="29"/>
+                                <rect key="frame" x="110" y="269" width="167" height="29"/>
                                 <segments>
                                     <segment title="Us Imperial"/>
                                     <segment title="Metric"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Preferences" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bna-KS-lKe">
-                                <rect key="frame" x="20" y="101" width="335" height="34"/>
+                                <rect key="frame" x="20" y="150" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="0.074314683970000003" green="0.28749100319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfz-3B-2KG">
-                                <rect key="frame" x="24" y="393" width="106" height="21"/>
+                                <rect key="frame" x="24" y="442" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXQ-ca-sNG">
-                                <rect key="frame" x="150" y="388" width="51" height="31"/>
+                                <rect key="frame" x="150" y="437" width="51" height="31"/>
                                 <connections>
                                     <action selector="notificationSwitch:" destination="axj-J9-l3Z" eventType="valueChanged" id="Iz5-Dt-Z6q"/>
                                 </connections>
                             </switch>
                             <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V5a-wt-piH" userLabel="themeButton">
-                                <rect key="frame" x="16" y="331" width="339" height="29"/>
+                                <rect key="frame" x="16" y="380" width="339" height="29"/>
                                 <segments>
                                     <segment title="Medical News Today"/>
                                     <segment title="Health.com"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Themes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlq-Bn-dlb">
-                                <rect key="frame" x="16" y="177" width="70" height="21"/>
+                                <rect key="frame" x="16" y="226" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TC-Oa-TEP">
-                                <rect key="frame" x="114" y="462" width="120" height="30"/>
+                                <rect key="frame" x="114" y="511" width="120" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="saveAppBtn"/>
                                 <state key="normal" title="Save Preferences"/>
                                 <connections>
@@ -459,7 +459,7 @@
         <!--Preferences Table View Controller-->
         <scene sceneID="a9k-eL-hM8">
             <objects>
-                <tableViewController id="25h-QG-6Tw" customClass="PreferencesTableViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="25h-QG-6Tw" customClass="PreferencesTableViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AUj-wL-OXy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,7 +467,7 @@
                         <sections>
                             <tableViewSection id="O7y-kp-gFH">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="c04-01-Umu" style="IBUITableViewCellStyleDefault" id="oZX-lE-gw5" customClass="accountPrefTableViewCell" customModule="HuaterFinal" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="c04-01-Umu" style="IBUITableViewCellStyleDefault" id="oZX-lE-gw5" customClass="accountPrefTableViewCell" customModule="Huater" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oZX-lE-gw5" id="vcY-ew-gVz">
@@ -488,7 +488,7 @@
                                             <segue destination="rnM-Mg-GxU" kind="show" id="N4a-TG-3O6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCell" rowHeight="62" id="cYi-pN-w6r" customClass="appPrefTableViewCell" customModule="HuaterFinal" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCell" rowHeight="62" id="cYi-pN-w6r" customClass="appPrefTableViewCell" customModule="Huater" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44" width="375" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cYi-pN-w6r" id="oCY-xC-w7t">
@@ -546,7 +546,7 @@
         <!--Show User Info View Controller-->
         <scene sceneID="A3A-hs-OpP">
             <objects>
-                <viewController id="rnM-Mg-GxU" customClass="ShowUserInfoViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rnM-Mg-GxU" customClass="ShowUserInfoViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YTG-ZL-6ES">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -725,7 +725,7 @@
         <!--Edit User Info Table View Controller-->
         <scene sceneID="1Ww-Ug-6y2">
             <objects>
-                <tableViewController id="dVN-Cz-ZH2" customClass="EditUserInfoTableViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="dVN-Cz-ZH2" customClass="EditUserInfoTableViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kjv-rW-6tf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -769,7 +769,7 @@
         <!--Summary-->
         <scene sceneID="19M-RB-efy">
             <objects>
-                <viewController id="Nbg-tB-W9g" customClass="DailyTrackerViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nbg-tB-W9g" customClass="DailyTrackerViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WlJ-v6-7bz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -830,7 +830,7 @@
         <!--Input-->
         <scene sceneID="aY5-WC-eak">
             <objects>
-                <viewController id="GOu-Cg-8CU" customClass="IntakeViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GOu-Cg-8CU" customClass="IntakeViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s7a-ZM-gNr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -903,7 +903,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="rTz-EM-yjX">
             <objects>
-                <tabBarController id="Yea-bC-gfn" customClass="TabBarViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Yea-bC-gfn" customClass="TabBarViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EqF-lc-PK1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -923,7 +923,7 @@
         <!--Settings-->
         <scene sceneID="bVk-fy-7M2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ND7-cg-KLB" customClass="MyViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ND7-cg-KLB" customClass="MyViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="AM6-SS-kmB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SVY-BO-y46">
@@ -942,7 +942,7 @@
         <!--News-->
         <scene sceneID="iof-gb-U3q">
             <objects>
-                <viewController id="0Kb-RA-T5s" customClass="NewsViewController" customModule="HuaterFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Kb-RA-T5s" customClass="NewsViewController" customModule="Huater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u61-fO-qae">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
