@@ -20,7 +20,7 @@ class IntakeViewController: UIViewController {
     var units: String = ""
     
     @IBAction func steppedBtn(_ sender: Any) {
-        i = stepperBtm.value/2
+        i = stepperBtm.value * 10
         
         intakeLbl.text = String(i) + " " + units
     }
