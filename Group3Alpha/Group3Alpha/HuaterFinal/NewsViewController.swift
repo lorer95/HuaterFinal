@@ -11,84 +11,37 @@ import UIKit
 
 class NewsViewController: UIViewController {
 
-    
     var currentUser: appUser!
     
-    @IBOutlet weak var ButtonA: UIButton!
-    @IBOutlet weak var ButtonB: UIButton!
-    @IBOutlet weak var ButtonC: UIButton!
+    @IBAction func website1(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.medicalnewstoday.com/articles/320249.php")! as URL, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func website2(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.medicalnewstoday.com/articles/320242.php")! as URL, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func website3(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.medicalnewstoday.com/articles/320242.php")! as URL, options: [:], completionHandler: nil)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let defaults = UserDefaults.standard
-        let idNO = defaults.integer(forKey: "idNO")
-        currentUser = PersistenceService.shared.getUser(index: idNO-1)
-        
-        if currentUser.theme == "Night" {
-            self.view.backgroundColor = UIColor.lightGray
-           
-        }
-        else {
-            self.view.backgroundColor = UIColor.white
-            
-        }
-        
-        if currentUser.news == "Medical News Today" {
-            ButtonA.setTitle("Eating cheese every day may help to protect heart health", for: .normal)
-            ButtonB.setTitle("BMI: A double-edged sword in your risk of dementia", for: .normal)
-            ButtonC.setTitle("What you should know about biotin-rich foods", for: .normal)
 
-        }
-        else {
-            ButtonA.setTitle("How to Actually Stay Healthy This Month—Without Depriving Yourself", for: .normal)
-            ButtonB.setTitle("How Long Should I Wait After a Cold to Hang Out with People Again?", for: .normal)
-            ButtonC.setTitle("Treadmills Were Invented to Punish Prisoners (and We Totally Get Why)", for: .normal)
-
-        
-
-        // Do any additional setup after loading the view.
     }
     
-    func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let defaults = UserDefaults.standard
-        let idNO = defaults.integer(forKey: "idNO")
-        currentUser = PersistenceService.shared.getUser(index: idNO-1)
-        
-        if currentUser.theme == "Night" {
-            self.view.backgroundColor = UIColor.lightGray
-            
-        }
-        else {
-            self.view.backgroundColor = UIColor.white
-            
-        }
-        
-        if currentUser.news == "Medical News Today" {
-            ButtonA.setTitle("Eating cheese every day may help to protect heart health", for: .normal)
-            ButtonB.setTitle("BMI: A double-edged sword in your risk of dementia", for: .normal)
-            ButtonC.setTitle("What you should know about biotin-rich foods", for: .normal)
-            
-        }
-        else {
-            ButtonA.setTitle("How to Actually Stay Healthy This Month—Without Depriving Yourself", for: .normal)
-            ButtonB.setTitle("How Long Should I Wait After a Cold to Hang Out with People Again?", for: .normal)
-            ButtonC.setTitle("Treadmills Were Invented to Punish Prisoners (and We Totally Get Why)", for: .normal)
-        }
 
         
     }
 
-    func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    }
-
 
     /*
     // MARK: - Navigation
