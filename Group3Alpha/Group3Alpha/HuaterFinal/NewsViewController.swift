@@ -14,6 +14,11 @@ class NewsViewController: UIViewController {
     
     var currentUser: appUser!
     
+    @IBOutlet weak var ButtonA: UIButton!
+    @IBOutlet weak var ButtonB: UIButton!
+    @IBOutlet weak var ButtonC: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,11 +35,23 @@ class NewsViewController: UIViewController {
             
         }
         
+        if currentUser.news == "Medical News Today" {
+            ButtonA.setTitle("Eating cheese every day may help to protect heart health", for: .normal)
+            ButtonB.setTitle("BMI: A double-edged sword in your risk of dementia", for: .normal)
+            ButtonC.setTitle("What you should know about biotin-rich foods", for: .normal)
+
+        }
+        else {
+            ButtonA.setTitle("How to Actually Stay Healthy This Month—Without Depriving Yourself", for: .normal)
+            ButtonB.setTitle("How Long Should I Wait After a Cold to Hang Out with People Again?", for: .normal)
+            ButtonC.setTitle("Treadmills Were Invented to Punish Prisoners (and We Totally Get Why)", for: .normal)
+
+        
 
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         let defaults = UserDefaults.standard
@@ -50,13 +67,28 @@ class NewsViewController: UIViewController {
             
         }
         
+        if currentUser.news == "Medical News Today" {
+            ButtonA.setTitle("Eating cheese every day may help to protect heart health", for: .normal)
+            ButtonB.setTitle("BMI: A double-edged sword in your risk of dementia", for: .normal)
+            ButtonC.setTitle("What you should know about biotin-rich foods", for: .normal)
+            
+        }
+        else {
+            ButtonA.setTitle("How to Actually Stay Healthy This Month—Without Depriving Yourself", for: .normal)
+            ButtonB.setTitle("How Long Should I Wait After a Cold to Hang Out with People Again?", for: .normal)
+            ButtonC.setTitle("Treadmills Were Invented to Punish Prisoners (and We Totally Get Why)", for: .normal)
+        }
+
+        
     }
 
-    override func didReceiveMemoryWarning() {
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    }
+
 
     /*
     // MARK: - Navigation

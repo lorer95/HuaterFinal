@@ -104,7 +104,7 @@ class DailyTrackerViewController: UIViewController {
         percentLeft = round(percentLeft*10)/10
         percentLbl.text = String(percentLeft) + "%"
         
-        if(percentLeft < 1){
+        if(percentLeft < 100){
             msgLbl.text = "Keep Drinking Water!"
         }
         else{
